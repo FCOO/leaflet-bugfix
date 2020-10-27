@@ -25,7 +25,7 @@
         };
     }(L.Path.prototype.setStyle);
 
-}(jQuery, this, document));
+}(L, this, document));
 
 
 
