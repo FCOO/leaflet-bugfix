@@ -1,33 +1,18 @@
 # leaflet-bugfix
->
 
 
 ## Description
-This package is used for...
+
+
+
+- Sets [Global Switch](https://leafletjs.com/reference-1.7.1.html#global-switches) for [Leaflet](https://leafletjs.com/) using [FCOO/leaflet-global-switch](https://github.com/FCOO/leaflet-global-switch) 
+- Adjust `bower.json` to include `dest`
+- Fix a bug in [Leaflet](https://leafletjs.com/) intruduced in version 1.5
+- Fix the [Leaflet](https://leafletjs.com/) version to **1.7.1** 
 
 ## Installation
 ### bower
 `bower install https://github.com/FCOO/leaflet-bugfix.git --save`
-
-## Demo
-http://FCOO.github.io/leaflet-bugfix/demo/ 
-
-## Usage
-```var myLeafletBugfix = new LeafletBugfix( options );```
-
-
-### options
-| Id | Type | Default | Description |
-| :--: | :--: | :-----: | --- |
-| options1 | boolean | true | If <code>true</code> the ... |
-| options2 | string | null | Contain the ... |
-
-### Methods
-
-    .methods1( arg1, arg2,...): Do something
-    .methods2( arg1, arg2,...): Do something else
-
-
 
 ## Copyright and License
 This plugin is licensed under the [MIT license](https://github.com/FCOO/leaflet-bugfix/LICENSE).
@@ -37,6 +22,3 @@ Copyright (c) 2020 [FCOO](https://github.com/FCOO)
 ## Contact information
 
 Niels Holt nho@fcoo.dk
-
-
-## Credits and acknowledgements
