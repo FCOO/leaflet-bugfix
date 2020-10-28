@@ -1,5 +1,5 @@
 /****************************************************************************
-    leaflet-bugfix.js, 
+    leaflet-bugfix.js,
 
     (c) 2020, FCOO
 
@@ -10,20 +10,32 @@
 (function (L/*, window, document, undefined*/) {
     "use strict";
 
-    //Fix bug intruduced in Leaflet 1.5
-    L.Path.prototype.setStyle = function (original_setStyle) {
-        return function(){
-            var save_updateBounds = this._updateBounds;
-            this._updateBounds = this._project;
+    /*
+    Fix bug intruduced in Leaflet 1.5
+    Version 1.7.1 is
+    L.Path.prototype.setStyle = function (style) {
+          setOptions(this, style);
+          if (this._renderer) {
+              this._renderer._updateStyle(this);
+              if (this.options.stroke && style && Object.prototype.hasOwnProperty.call(style, 'weight')) {
+                  this.this._updateBounds();
+              }
+          }
+          return this;
+      };
+    */
 
-            var result = original_setStyle.apply(this, arguments);
+    L.Path.prototype.setStyle = function (style) {
+        this.options = $.extend(this.options, style);
+          if (this._renderer) {
+              this._renderer._updateStyle(this);
+              if (this.options.stroke && style && Object.prototype.hasOwnProperty.call(style, 'weight')) {
+                  this._project();
+              }
+          }
+          return this;
+      };
 
-            this._updateBounds = save_updateBounds;
-
-            return result;
-
-        };
-    }(L.Path.prototype.setStyle);
 
 }(L, this, document));
 
