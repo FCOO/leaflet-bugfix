@@ -1,6 +1,6 @@
 {
   "name": "leaflet-bugfix",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "homepage": "https://github.com/FCOO/leaflet-bugfix",
   "authors": [
     "Niels Holt"
@@ -37,7 +37,7 @@
         "dist/leaflet.css"
       ],
       "dependencies": {
-        "fcoo-global-switches": "latest"
+        "leaflet-global-switches": "latest"
       }
     }
   }
