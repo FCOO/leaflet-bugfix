@@ -26,16 +26,15 @@
     */
 
     L.Path.prototype.setStyle = function (style) {
-        this.options = $.extend(this.options, style);
-          if (this._renderer) {
-              this._renderer._updateStyle(this);
-              if (this.options.stroke && style && Object.prototype.hasOwnProperty.call(style, 'weight')) {
-                  this._project();
-              }
-          }
-          return this;
-      };
-
+        L.setOptions(this, style);
+        if (this._renderer) {
+            this._renderer._updateStyle(this);
+            if (this.options.stroke && style && Object.prototype.hasOwnProperty.call(style, 'weight')) {
+                this._project(); //<- Changed!
+            }
+        }
+        return this;
+    };
 
 }(L, this, document));
 

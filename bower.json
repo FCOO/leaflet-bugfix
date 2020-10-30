@@ -1,6 +1,6 @@
 {
   "name": "leaflet-bugfix",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "homepage": "https://github.com/FCOO/leaflet-bugfix",
   "authors": [
     "Niels Holt"
@@ -14,7 +14,6 @@
     "url": "git://github.com/FCOO/leaflet-bugfix.git"
   },
   "dependencies": {
-    "jquery": "latest",
     "leaflet": "latest",
     "leaflet-global-switches": "fcoo/leaflet-global-switches#^1.0.0"
   },
