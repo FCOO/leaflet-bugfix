@@ -25,6 +25,7 @@
       };
     */
 
+    /* First fix by Niels Holt
     L.Path.prototype.setStyle = function (style) {
         L.setOptions(this, style);
         if (this._renderer) {
@@ -34,6 +35,23 @@
             }
         }
         return this;
+    };
+    */
+
+    //Fix by https://github.com/fodor0205:
+    L.Polyline.prototype._updateBounds = function () {
+          var w = this._clickTolerance(),
+              p = new L.Point(w, w);
+
+        if (!this._rawPxBounds) {
+            return;
+        }
+
+
+        this._pxBounds = new L.Bounds([
+            this._rawPxBounds.min.subtract(p),
+            this._rawPxBounds.max.add(p)
+        ]);
     };
 
 }(L, this, document));
