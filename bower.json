@@ -1,6 +1,6 @@
 {
   "name": "leaflet-bugfix",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "homepage": "https://github.com/FCOO/leaflet-bugfix",
   "authors": [
     "Niels Holt"
@@ -14,8 +14,7 @@
     "url": "git://github.com/FCOO/leaflet-bugfix.git"
   },
   "dependencies": {
-    "leaflet": "latest",
-    "leaflet-global-switches": "fcoo/leaflet-global-switches#^1.0.0"
+    "leaflet": "latest"
   },
   "devDependencies": {},
   "license": "MIT",
@@ -28,16 +27,5 @@
   ],
   "moduleType": [
     "es6"
-  ],
-  "overrides": {
-    "leaflet": {
-      "main": [
-        "dist/leaflet-src.js",
-        "dist/leaflet.css"
-      ],
-      "dependencies": {
-        "leaflet-global-switches": "latest"
-      }
-    }
-  }
+  ]
 }
