@@ -1,7 +1,7 @@
 # leaflet-bugfix
 
 
-## CURRENT VERSION OF LEAFLET = 1.7.1
+## ARCHIVED - This bug fix is included in Leaflet 1.8.0
 
 ## Description
 Fix known bugs in [Leaflet](https://leafletjs.com/)
